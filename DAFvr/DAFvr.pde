@@ -3,7 +3,7 @@ PShape grid, floor;
 DAF[] dafjes = new DAF[100];
 
 void setup() {
-  fullScreen(PCardboard.MONO);
+  fullScreen(PCardboard.STEREO);
 
   floor = createShape(RECT, -10000, -10000, 20000, 20000);
   floor.setFill(color(0));
