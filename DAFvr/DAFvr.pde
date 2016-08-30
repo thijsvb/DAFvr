@@ -45,28 +45,18 @@ class DAF {
   PShape daf;
   float r, xa, ya, za, ad;
   DAF() {
-    daf = createShape();
-    daf.beginShape(TRIANGLE_STRIP);
-    daf.vertex(0, 0, 0);
-    daf.vertex(100, 0, 0);
-    daf.vertex(0, 200, 0);
-    daf.vertex(100, 200, 0);
-    daf.vertex(100, 200, 300);
-    daf.vertex(0, 200, 300);
-    daf.vertex(100, 0, 300);
-    daf.vertex(0, 0, 300);
-    daf.endShape();
+    daf = loadShape("DAF.obj"); 
     daf.setStroke(color(0));
     daf.rotateX(random(TWO_PI));
     daf.rotateY(random(TWO_PI));
     daf.rotateZ(random(TWO_PI));
     daf.setFill(color(random(255), 255, 255));
 
-    r=random(5000);
+    r=random(3000);
     xa=random(TWO_PI);
     ya=random(TWO_PI);
     za=random(TWO_PI);
-    ad=random(1000);
+    ad=random(500, 1000);
   }
 
   void show() {
